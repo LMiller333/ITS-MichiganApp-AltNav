@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {WidgetsPage} from '../widgets/widgets';
 
 @Component({
   selector: 'page-account',
@@ -9,6 +10,10 @@ export class AccountPage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  public goToWidgets() {
+    this.navCtrl.push(WidgetsPage);
   }
 
 }

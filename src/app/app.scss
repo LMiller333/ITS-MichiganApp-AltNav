@@ -27,3 +27,7 @@ ion-content {
     width: calc(100% - 16px);
     margin:8px;
 }
+
+.back-button{
+    color: color($colors, extra-light);
+}

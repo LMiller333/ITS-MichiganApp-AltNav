@@ -15,6 +15,10 @@ export class HomePage {
     // public alerCtrl: AlertController
   ) { }
 
+  public goToWidgets() {
+    this.navCtrl.push(WidgetsPage);
+  }
+
 
   // doAlert() {
   //   let alert = this.alerCtrl.create({
