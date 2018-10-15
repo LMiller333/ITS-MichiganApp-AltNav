@@ -4,9 +4,6 @@
       <ion-title>Search</ion-title>
     </ion-navbar>
 
-    <ion-navbar>
-      <ion-searchbar (ionInput)="getItems($event)" color="extra-light"></ion-searchbar>
-    </ion-navbar>
     <ion-toolbar>
       
       <ion-segment [(ngModel)]="searchType" color="extra-light">
@@ -22,7 +19,12 @@
       </ion-segment>
 
     </ion-toolbar>
-  </ion-header>
+
+    <ion-toolbar>
+        <ion-searchbar (ionInput)="getItems($event)" color="extra-light"></ion-searchbar>
+      </ion-toolbar>
+
+</ion-header>
   
   <ion-content padding class="outer-content">
     <div [ngSwitch]="searchType">

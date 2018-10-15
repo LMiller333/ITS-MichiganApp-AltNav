@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-// import { AlertController } from 'ionic-angular';
-import { WidgetsPage } from '../widgets/widgets';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-widgets',
+  templateUrl: 'widgets.html'
 })
 
-export class HomePage {
+export class WidgetsPage {
 
   constructor(
-    public navCtrl: NavController,
-    // public alerCtrl: AlertController
+    public navCtrl: NavController
   ) { }
-
 
   // doAlert() {
   //   let alert = this.alerCtrl.create({

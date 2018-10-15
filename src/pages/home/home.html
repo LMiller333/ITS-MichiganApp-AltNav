@@ -27,7 +27,7 @@
       <ion-item>
         Psychology 101
       </ion-item>
-      <ion-item>
+      <ion-item style="border-bottom: none;">
         Calculus 101
         </ion-item>
     </ion-list>
@@ -38,7 +38,8 @@
 
 <!-- App Favorites -->
   <ion-card>
-    <ion-card-header>
+    <ion-card-header style="border-bottom: 0.55px solid #c8c7cc">
+        <ion-icon name="star" item-start></ion-icon>
       My Favorites
     </ion-card-header>
     <ion-grid>
@@ -83,9 +84,9 @@
           Computer Labs</button>
       </ion-col>
       <ion-col col-6>
-        <button ion-button icon-start full class="widget">
+        <a href="pages/widgets/widgets.html"><button ion-button icon-start full class="widget" >
           <ion-icon name="add-circle"></ion-icon>
-          Add</button>
+          Add</button></a>
       </ion-col>
     </ion-row>
     
