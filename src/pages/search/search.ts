@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {ngSwitch} from '@angular/core';
+
 
 @Component({
   selector: 'page-search',
@@ -7,8 +9,9 @@ import { NavController } from 'ionic-angular';
 })
 export class SearchPage {
 
-  constructor(public navCtrl: NavController) {
+  searchType: string = "places";
 
+  constructor(public navCtrl: NavController) {
   }
 
 }
