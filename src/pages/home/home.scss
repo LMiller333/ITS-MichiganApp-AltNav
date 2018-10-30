@@ -16,14 +16,62 @@ page-home {
 
 .widget {
     height: 10vh;
+    width: 48%;
     text-align: center;
 }
 
 .banner {
-    border-radius: 10px;
     background: color($colors, secondary);
+    border-radius: 0px;
+    box-shadow:none;
 }
 
 .fav-button{
     height: 10vh;
+}
+
+ion-card-header{
+    font-weight:bold;
+}
+
+.img-button{
+    background: color($colors,primary);
+    text-transform: none;
+    height:10vh;
+    font-size:2.5rem;
+    color:color($colors,secondary);
+    width: calc(100% - 16px);
+    margin: 8px;
+    border-radius: 5px;
+    font-weight:500;
+}
+
+.img-bus{
+    background:linear-gradient(
+        rgba(0, 39, 76, 0.6), 
+        rgba(0, 39, 76, 0.6)
+      ),url('https://s3.amazonaws.com/i.seelio.com/38/0b/380bdca967295896042dfd83a0de4f6fd4ac.jpg');
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position: center;
+}
+
+.img-dining{
+    background:linear-gradient(
+        rgba(0, 39, 76, 0.6),
+        rgba(0, 39, 76, 0.6)
+      ),url('https://dining.umich.edu/wp-content/uploads/2016/08/IMG_0154-1-1100x700.jpg');
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position: center;
+}
+
+.img-comp{
+    background:linear-gradient(
+        rgba(0, 39, 76, 0.6),
+        rgba(0, 39, 76, 0.6)
+      ),url('https://its.umich.edu/sites/default/files/Angell-Hall-Campus-Computing-Site.jpg');
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position: center;
 }

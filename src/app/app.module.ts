@@ -9,6 +9,15 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AccountPage} from '../pages/account/account';
 import { WidgetsPage} from '../pages/widgets/widgets';
+import { RecsportsPage } from '../pages/recsports/recsports';
+import { CcrbPage } from '../pages/ccrb/ccrb';
+import { ImsbPage } from '../pages/imsb/imsb';
+import { DiningPage } from '../pages/dining/dining';
+import { GreenehooverPage } from '../pages/greenehoover/greenehoover';
+import { NorthquadPage } from '../pages/northquad/northquad';
+import { MorePage } from '../pages/more/more';
+import { HomeAltPage } from '../pages/home-alt/home-alt';
+import { FavoritesPage } from '../pages/favorites/favorites';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +30,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AccountPage,
     HomePage,
     TabsPage,
-    WidgetsPage
+    WidgetsPage,
+    RecsportsPage,
+    CcrbPage,
+    ImsbPage,
+    DiningPage,
+    GreenehooverPage,
+    NorthquadPage,
+    MorePage,
+    HomeAltPage,
+    FavoritesPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +53,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AccountPage,
     HomePage,
     TabsPage,
-    WidgetsPage
+    WidgetsPage,
+    RecsportsPage,
+    CcrbPage,
+    ImsbPage,
+    DiningPage,
+    GreenehooverPage,
+    NorthquadPage,
+    MorePage,
+    HomeAltPage,
+    FavoritesPage
   ],
   providers: [
     StatusBar,

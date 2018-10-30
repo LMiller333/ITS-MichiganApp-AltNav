@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 // import { AlertController } from 'ionic-angular';
 import { WidgetsPage } from '../widgets/widgets';
+import { RecsportsPage } from '../recsports/recsports';
+import { DiningPage } from '../dining/dining';
+import { CcrbPage } from '../ccrb/ccrb';
+import { GreenehooverPage } from '../greenehoover/greenehoover';
+import { NorthquadPage} from '../northquad/northquad';
+import { MorePage} from '../more/more';
+import { HomeAltPage } from '../home-alt/home-alt';
 
 @Component({
   selector: 'page-home',
@@ -18,6 +25,35 @@ export class HomePage {
   public goToWidgets() {
     this.navCtrl.push(WidgetsPage);
   }
+
+  public goToRecSports() {
+    this.navCtrl.push(RecsportsPage);
+  }
+
+  public goToDining(){
+    this.navCtrl.push(DiningPage);
+  }
+
+  public goToCCRB(){
+    this.navCtrl.push(CcrbPage);
+  }
+
+  public goToGreeneHoover(){
+    this.navCtrl.push(GreenehooverPage);
+  }
+
+  public goToNorthQuad(){
+    this.navCtrl.push(NorthquadPage);
+  }
+
+  public goToMore(){
+    this.navCtrl.push(MorePage);
+  }
+
+  public goToAltHome(){
+    this.navCtrl.push(HomeAltPage);
+  }
+
 
 
   // doAlert() {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {WidgetsPage} from '../widgets/widgets';
+import { FavoritesPage } from '../favorites/favorites';
 
 @Component({
   selector: 'page-account',
@@ -14,6 +15,10 @@ export class AccountPage {
 
   public goToWidgets() {
     this.navCtrl.push(WidgetsPage);
+  }
+
+  public goToFavorites(){
+    this.navCtrl.push(FavoritesPage);
   }
 
 }

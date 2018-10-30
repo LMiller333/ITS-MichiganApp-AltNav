@@ -1,0 +1,142 @@
+<!--
+  Generated template for the HomeAltPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>Home</ion-title>
+
+    <ion-buttons end>
+        <button ion-button (click)="goToHome();">
+            Toggle Page
+          </button>
+      </ion-buttons>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- Banner -->
+  <ion-card class="banner">
+      <ion-card-header>
+          Welcome to the Michigan App!
+      </ion-card-header>
+    </ion-card>
+  
+  
+  
+
+
+<!-- Today's Classes -->
+<ion-card>
+    <ion-item class="home-card-header">
+        <ion-icon name="calendar" item-start></ion-icon>Today's Classes
+        <!-- <ion-icon name="close" item-end color="medium-dark"></ion-icon> -->
+      </ion-item> 
+    <ion-list>
+      <ion-item style="border-top: none;">
+        Psychology 101
+      </ion-item>
+      <ion-item style="border-bottom: none;">
+        Calculus 101
+        </ion-item>
+    </ion-list>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
+
+    <!-- Bus-->
+    <ion-card>
+        <ion-item class="home-card-header">
+          <ion-icon name="bus" item-start></ion-icon>Bus
+          <!-- <ion-icon name="close" item-end color="medium-dark"></ion-icon> -->
+        </ion-item> 
+        <ion-grid>
+            <ion-row>
+              <ion-col col-6>
+                <button ion-button icon-end full text-wrap class="fav-button" color="primary" (click)="goToGreeneHoover()">
+                    
+                    Greene &amp; Hoover <ion-icon name="star"></ion-icon></button>
+              </ion-col>
+              <ion-col col-6>
+                  <button ion-button icon-end full text-wrap class="fav-button" color="primary">
+                      
+                     More<ion-icon name="arrow-forward"></ion-icon> </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-card>
+
+
+      <!-- Bus-->
+  <ion-card>
+      <ion-item class="home-card-header">
+        <ion-icon name="restaurant" item-start></ion-icon>Dining
+        <!-- <ion-icon name="close" item-end color="medium-dark"></ion-icon> -->
+      </ion-item> 
+      <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <button ion-button icon-end full text-wrap class="fav-button" color="primary" (click)="goToNorthQuad()">
+                  
+                  North Quad <ion-icon name="star"></ion-icon></button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button icon-end full text-wrap class="fav-button" color="primary" (click)="goToDining()">
+                    
+                   More<ion-icon name="arrow-forward"></ion-icon> </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </ion-card>
+
+  <ion-card>
+      <ion-item class="home-card-header">
+        <ion-icon name="desktop" item-start></ion-icon>Computer Labs
+        <!-- <ion-icon name="close" item-end color="medium-dark"></ion-icon> -->
+      </ion-item> 
+      <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <button ion-button icon-end block text-wrap outline class="fav-button" color="primary">
+                  
+                  Select your favorites<ion-icon name="star"></ion-icon></button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button icon-end full text-wrap class="fav-button" color="primary">
+                    
+                   More<ion-icon name="arrow-forward"></ion-icon> </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </ion-card>
+
+
+  <ion-card ion-button (click)="goToMore();">
+      <ion-item class="home-card-header">
+          More
+          <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item> 
+    </ion-card>
+  
+  
+  
+  
+  
+  
+  
+  <!-- Pinned Widgets -->
+    
+  
+    <button ion-button outline block (click)="goToWidgets();">Customize Home Page</button>
+
+</ion-content>

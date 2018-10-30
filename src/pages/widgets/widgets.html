@@ -1,59 +1,65 @@
 <ion-header>
         <ion-navbar>
-          <ion-title>Dashboard Settings</ion-title>
+          <ion-title>Customize Home Page</ion-title>
         </ion-navbar>
       </ion-header>
       
       <ion-content padding class="outer-content">
+
+        <ion-list>
+            <ion-list-header>
+                Show Widgets
+            </ion-list-header>
+            <ion-item>
+                <ion-label>Favorites</ion-label>
+                <ion-toggle  checked="true"></ion-toggle>
+            </ion-item>
+            <ion-item icon-end>
+              <ion-label>Today's Class Schedule</ion-label>
+              <ion-toggle  checked="true"></ion-toggle>
+            </ion-item>
+            <ion-item icon-end>
+                <ion-label>Upcoming Academic Events</ion-label>
+                <ion-toggle  checked="false"></ion-toggle>
+            </ion-item>
+            
+        </ion-list>
       
       <ion-list>
           <ion-list-header>
-              SHOW ME
+              Show App Sections
           </ion-list-header>
           <ion-item>
-            <ion-label>Today's Class Schedule</ion-label>
-            <ion-checkbox  checked="true"></ion-checkbox>
+            <ion-label>Bus</ion-label>
+            <ion-toggle checked="true"></ion-toggle>
             </ion-item>
-        <ion-item>
-            <ion-label>My Favorites</ion-label>
-            <ion-checkbox  checked="true"></ion-checkbox>
-            </ion-item>
-
           <ion-item>
-            <ion-label>Bus Tracker</ion-label>
-            <ion-checkbox  checked="true"></ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-label>Dining Locations</ion-label>
-            <ion-checkbox  checked="true"></ion-checkbox>
+            <ion-label>Dining</ion-label>
+            <ion-toggle  checked="true"></ion-toggle>
             </ion-item>
         <ion-item>
             <ion-label>Computer Labs</ion-label>
-            <ion-checkbox  checked="true"></ion-checkbox>
+            <ion-toggle  checked="true"></ion-toggle>
             </ion-item>
         <ion-item>
             <ion-label>After Hours Transit</ion-label>
-            <ion-checkbox ></ion-checkbox>
+            <ion-toggle ></ion-toggle>
             </ion-item>
         <ion-item>
             <ion-label>Events</ion-label>
-            <ion-checkbox ></ion-checkbox>
+            <ion-toggle ></ion-toggle>
             </ion-item>
         <ion-item>
-            <ion-label>Parking Lots</ion-label>
-            <ion-checkbox ></ion-checkbox>
+            <ion-label>Parking</ion-label>
+            <ion-toggle ></ion-toggle>
             </ion-item>
         <ion-item>
             <ion-label>Rec Sports</ion-label>
-            <ion-checkbox ></ion-checkbox>
+            <ion-toggle ></ion-toggle>
             </ion-item>
-        <ion-item>
-                <ion-label>Upcoming Academic Events</ion-label>
-                <ion-checkbox ></ion-checkbox>
-                </ion-item>
       </ion-list>
       
-      <button ion-button full color="secondary">Change Order</button>
+      <button ion-button outline block color="primary">Change Order</button>
       
       </ion-content>
       

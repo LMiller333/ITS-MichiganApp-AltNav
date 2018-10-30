@@ -1,0 +1,76 @@
+<!--
+  Generated template for the NorthquadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>North Quad</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openActionSheet()">
+            <ion-icon color="extra-light" name="more"></ion-icon>
+          </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+      <img src="https://dining.umich.edu/wp-content/uploads/2015/06/NQD-hall-full-1-new-1100x600.jpg"/>
+      <h2>North Quad   <ion-icon name="star"></ion-icon></h2>
+      <p>105 South State</p>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 text-right>
+              <button ion-button color="dark" clear icon-only>
+              <ion-icon name='arrow-back' is-active="false"></ion-icon>
+              </button>
+          </ion-col>
+          <ion-col col-4 text-center>
+            <button ion-button clear color="dark" icon-start>
+            Today
+            </button>
+          </ion-col>
+          <ion-col col-4 text-left>
+              <button ion-button color="dark" clear icon-only>
+              <ion-icon name='arrow-forward' is-active="false"></ion-icon>
+              </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+
+
+      <ion-list>
+        <ion-list-header>Hours</ion-list-header>
+        <ion-item>Breakfast
+            <ion-note item-end>
+                9-10 AM
+                </ion-note>
+        </ion-item>
+        <ion-item>Lunch
+            <ion-note item-end>
+                12-2 PM
+                </ion-note>
+        </ion-item>
+        <ion-item>Dinner
+            <ion-note item-end>
+                5-7 PM
+                </ion-note>
+        </ion-item>
+      </ion-list>
+    
+      <ion-list>
+          <ion-list-header>Menus</ion-list-header>
+          <ion-item>Breakfast</ion-item>
+          <ion-item>Lunch</ion-item>
+          <ion-item>Dinner</ion-item>
+        </ion-list>
+
+        <button ion-item>Go to Rec Sports </button>
+
+</ion-content>
