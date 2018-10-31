@@ -18,6 +18,7 @@ import { NorthquadPage } from '../pages/northquad/northquad';
 import { MorePage } from '../pages/more/more';
 import { HomeAltPage } from '../pages/home-alt/home-alt';
 import { FavoritesPage } from '../pages/favorites/favorites';
+import { FiltersPage } from '../pages/filters/filters';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,7 +40,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NorthquadPage,
     MorePage,
     HomeAltPage,
-    FavoritesPage
+    FavoritesPage,
+    FiltersPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NorthquadPage,
     MorePage,
     HomeAltPage,
-    FavoritesPage
+    FavoritesPage,
+    FiltersPage
   ],
   providers: [
     StatusBar,

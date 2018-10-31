@@ -7,12 +7,131 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>filters</ion-title>
+    <ion-title>Filters</ion-title>
+    <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="extra-light">Cancel</span>
+        </button>
+      </ion-buttons>
+      <ion-buttons end>
+          <button ion-button (click)="dismiss()">
+            <span ion-text color="extra-light">Apply</span>
+          </button>
+        </ion-buttons>
   </ion-navbar>
+
+  <ion-toolbar>
+      
+      <ion-segment [(ngModel)]="searchType" color="extra-light">
+        <ion-segment-button value="places">
+          Places
+        </ion-segment-button>
+        <ion-segment-button value="people">
+          People
+        </ion-segment-button>
+        <ion-segment-button value="courseguide">
+          Course Guide
+        </ion-segment-button>
+        <!-- <ion-segment-button value="librarycatalog">
+          Library 
+        </ion-segment-button> -->
+      </ion-segment>
+
+    </ion-toolbar>
+
+    <ion-toolbar>
+        <ion-searchbar (ionInput)="getItems($event)" color="extra-light"></ion-searchbar>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="presentFilterModal()">
+              <ion-icon name="options" color="extra-light"></ion-icon>
+            </button>
+          </ion-buttons>
+      </ion-toolbar>
 
 </ion-header>
 
 
+
+
 <ion-content padding>
+
+    
+    
+      <div [ngSwitch]="searchType">
+          <div *ngSwitchCase="'places'">
+              <ion-list>
+                  <ion-list-header>
+                      General
+                    </ion-list-header>
+                  <ion-item>
+                    <ion-label>Place Type</ion-label>
+                      <ion-select [(ngModel)]="placetype" multiple="true">
+                          <ion-option value="building">Building</ion-option>
+                          <ion-option value="complab" [selected]="true">Computer Lab</ion-option>
+                          <ion-option value="department">Department</ion-option>
+
+                        </ion-select>
+                  </ion-item>
+                  <ion-item><ion-label>Near Me</ion-label> <ion-toggle></ion-toggle>
+                  </ion-item>
+                  <ion-item><ion-label>Open Now</ion-label><ion-toggle checked="true"></ion-toggle>
+                  </ion-item>
+                </ion-list>
+
+                <ion-list>
+                    <ion-list-header>
+                      Computer Types
+                    </ion-list-header>
+                      <ion-item><ion-label>Windows</ion-label>><ion-toggle></ion-toggle></ion-item>
+                      <ion-item><ion-label>Mac</ion-label>><ion-toggle></ion-toggle></ion-item>
+                      <ion-item><ion-label>CAEN</ion-label>><ion-toggle></ion-toggle></ion-item>
+                    </ion-list>
+
+              <ion-list>
+                <ion-list-header>
+                  Features
+                </ion-list-header>
+                <ion-item><ion-label>Printing</ion-label>><ion-toggle></ion-toggle></ion-item>
+                <ion-item><ion-label>Group Space</ion-label>><ion-toggle></ion-toggle></ion-item>
+                <ion-item><ion-label>Quiet</ion-label>><ion-toggle></ion-toggle></ion-item>
+                </ion-list>
+          </div>
+          <div *ngSwitchCase="'people'">
+              <ion-item>
+                  <ion-label>Campus</ion-label>
+                    <ion-select [(ngModel)]="placetype" multiple="true">
+                        <ion-option value="complab" [selected]="true">Ann Arbor</ion-option>
+                        <ion-option value="building">Dearborn</ion-option>
+                        <ion-option value="department">Flint</ion-option>
+                      </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Role</ion-label>
+                      <ion-select [(ngModel)]="placetype" multiple="true">
+                          <ion-option value="complab" >Student</ion-option>
+                          <ion-option value="building">Faculty</ion-option>
+                          <ion-option value="department">Staff</ion-option>
+                          <ion-option value="department">Alumni</ion-option>
+                        </ion-select>
+                  </ion-item>
+          </div>
+    
+          <div *ngSwitchCase="'courseguide'">
+            <ion-list>
+                <ion-item><ion-label>Bookmarked by me</ion-label><ion-toggle></ion-toggle></ion-item>
+                <ion-item>
+                    <ion-label>Term</ion-label>
+                      <ion-select [(ngModel)]="placetype" multiple="true">
+                          <ion-option value="building">F2018</ion-option>
+                          <ion-option value="complab" [selected]="true">W2018</ion-option>
+                          <ion-option value="department">Sp2019</ion-option>
+                        </ion-select>
+                  </ion-item>
+                  <button ion-item >Subject</button>
+            </ion-list>
+          </div>
+      </div>
+
+      <button ion-button clear block color="danger">Clear All</button>
 
 </ion-content>
