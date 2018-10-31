@@ -2,10 +2,15 @@ page-feed {
 
 }
 
-.view-more{
-    background:color($colors,extra-light);
-}
+// .view-more{
+//     background:color($colors,extra-light);
+// }
 
-.view-more ion-item{
-    background:inherit;
+// .view-more ion-item{
+//     background:inherit;
+// }
+
+
+.alert-description{
+    font-size:1rem !important;
 }

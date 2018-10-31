@@ -24,9 +24,9 @@
 
 
 <!-- App Favorites -->
-<ion-card>
+<ion-card >
     <ion-card-header>
-        <ion-icon name="star" item-start></ion-icon>
+        <ion-icon name="star" item-start></ion-icon>     
       Favorites
     </ion-card-header> 
     <ion-grid>
@@ -53,13 +53,13 @@
 
 
 <!-- Today's Classes -->
-  <ion-card>
+  <ion-card >
     <ion-card-header>
         <ion-icon name="calendar" item-start></ion-icon>
         Today's Upcoming Classes
       </ion-card-header>
     <ion-list>
-      <ion-item>
+      <ion-item style="border-top: none;">
         Psychology 101
       </ion-item>
       <ion-item style="border-bottom: none;">
@@ -88,7 +88,7 @@
 
 <!-- Half Width Button Style -->
 
-<ion-grid>
+<ion-grid >
   <ion-row>
       <button ion-button icon-start class="widget ">
           <ion-icon name="bus"></ion-icon>
@@ -114,7 +114,7 @@
       <button ion-button  text-wrap class="widget hide">
           <ion-icon name="desktop"></ion-icon>
           Athletic Calendar</button>
-      <button ion-button icon-start class="widget" (click)="goToMore();">
+      <button ion-button icon-start outline class="widget" (click)="goToMore();">
         More</button>
   </ion-row>
 </ion-grid>
@@ -147,9 +147,28 @@
     
   </ion-grid> -->
 
-  <button ion-button outline block (click)="goToWidgets();">Customize Home Page</button>
+  <div class="footer">
+      <hr>
+      <ion-list >
+
+        <button ion-item  (click)="goToWidgets();">Customize Home Page</button>
+        <button ion-item >Send Feedback</button>
+        <button ion-item >About Michigan App</button>
+      </ion-list>
+    
+      <button ion-button outline block color="danger">Call Emergency Services</button>
+
+  </div>
+
+
+
 
 
 </ion-content>
+
+
+
+
+
 
 
