@@ -14,11 +14,14 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 })
 export class FiltersPage {
 
-  searchType: string = "places";
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
-
+    let temp = navParams.get('searchTypeFromSearch');
+    
   }
+
+  
 
   dismiss() {
     this.viewCtrl.dismiss();

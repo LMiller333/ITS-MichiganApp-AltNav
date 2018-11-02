@@ -18,7 +18,7 @@ export class SearchPage {
   }
 
   public presentFilterModal() {
-    const modal = this.modalCtrl.create(FiltersPage);
+    const modal = this.modalCtrl.create(FiltersPage, {searchTypeFromSearch: this.searchType});
     modal.present();
   }
 
