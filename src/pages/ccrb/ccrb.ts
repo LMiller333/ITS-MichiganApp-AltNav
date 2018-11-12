@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { RecsportsPage } from '../recsports/recsports';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 
 /**
@@ -16,7 +17,7 @@ import { RecsportsPage } from '../recsports/recsports';
 })
 export class CcrbPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public nativePageTransitions: NativePageTransitions, public actionSheetCtrl: ActionSheetController) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +25,12 @@ export class CcrbPage {
   }
 
   goToRecSports(){
-    this.navCtrl.push(RecsportsPage);
+
+    this.nativePageTransitions.flip(null);
+    this.navCtrl.push(RecsportsPage).then(() => {
+      let index = 1;
+      this.navCtrl.remove(index);
+    });
   }
 
   openActionSheet(){
