@@ -15,16 +15,19 @@
 
 
 <!-- Banner -->
-  <ion-card class="banner">
-    <ion-card-header>
-      Welcome to the Michigan App!
-    </ion-card-header>
-  </ion-card>
+<div class="banner">
+    <ion-card class="image-card">
+        <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1486420801%2Funiversity-michigan-library-UMICH0217.jpg%3Fitok%3DgAK8jPOP&w=1000&c=sc&poi=face&q=70"/>
+        <div class="card-title">Welcome</div>
+        <div class="card-subtitle">Great Hall by Author</div>
+    </ion-card>
+</div>
+
 
 
 
 <!-- App Favorites -->
-<ion-card >
+<ion-card class="custom-widget-card" >
     <ion-card-header>
         <ion-icon name="star" item-start></ion-icon>     
       Favorites
@@ -32,28 +35,32 @@
     <ion-grid>
         <ion-row>
           <ion-col col-4>
-            <button ion-button icon-start full text-wrap class="fav-button" color="primary" (click)="goToGreeneHoover()">
+            <button ion-button icon-start full text-wrap class="fav-button" color="secondary" (click)="goToGreeneHoover()">
                 <ion-icon name="bus"></ion-icon>
                 Greene &amp; Hoover</button>
           </ion-col>
           <ion-col col-4>
-              <button ion-button icon-start full text-wrap class="fav-button" color="primary" (click)="goToNorthQuad()">
+              <button ion-button icon-start full text-wrap class="fav-button" color="secondary" (click)="goToNorthQuad()">
                   <ion-icon name="restaurant"></ion-icon>
                   North Quad</button>
           </ion-col>
           <ion-col col-4>
-            <button ion-button icon-start full text-wrap class="fav-button" color="primary" (click)="goToCCRB()">
+            <button ion-button icon-start full text-wrap class="fav-button" color="secondary" (click)="goToCCRB()">
               <ion-icon name="bicycle"></ion-icon>
               CCRB</button>
           </ion-col>
         </ion-row>
       </ion-grid>
+      <ion-list>
+          <button ion-item (click)="goToFavorites()" class="options">Edit Favorites</button>
+      </ion-list>
+
 </ion-card>
 
 
 
 <!-- Today's Classes -->
-  <ion-card >
+  <ion-card class="custom-widget-card">
     <ion-card-header>
         <ion-icon name="calendar" item-start></ion-icon>
         Today's Upcoming Classes
@@ -66,9 +73,9 @@
         Calculus 101
         </ion-item>
     </ion-list>
-    <ion-card-content>
-
-    </ion-card-content>
+    <ion-list>
+        <button ion-item class="options">View All Classes</button>
+    </ion-list>
   </ion-card>
 
 
@@ -148,17 +155,21 @@
   </ion-grid> -->
 
   <div class="footer">
-      <hr>
       <ion-list >
+        <ion-list-header>More</ion-list-header>
 
         <button ion-item  (click)="goToWidgets();">Customize Home Page</button>
-        <button ion-item >Send Feedback</button>
-        <button ion-item >About Michigan App</button>
+        <button ion-item  >Send Feedback</button>
+        <button ion-item  >Submit Banner Photo</button>
       </ion-list>
-    
-      <button ion-button outline block color="danger">Call Emergency Services</button>
 
   </div>
+
+  <div class="emergency-button">
+      <button ion-button outline block color="danger">Call Emergency Services</button>
+  </div>
+
+  <button ion-button clear small block>About Michigan App</button>
 
 
 

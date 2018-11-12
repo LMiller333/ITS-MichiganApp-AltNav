@@ -1,80 +1,110 @@
 page-home {
 
-}
+    .grid{
+        padding:12px;
+    }
 
-.toolbar-background{
-    background: color($colors, primary);
-}
+    .custom-widget-card .options{
+        font-size:1.5rem;
+    }
 
-.toolbar-title {
-    color:color($colors, extra-light);
-}
+    
+    .widget {
+        height: 10vh;
+        width: 48%;
+        text-align: center;
+        margin:3px;
+    }
+    
+    .banner {
+        // background: color($colors, secondary);
+        border-radius: 0px;
+        box-shadow:none;
+    }
 
-.hide{
-    display:none;
-}
+    
+    .fav-button{
+        height: 10vh;
+    }
+    
+    ion-card-header{
+        font-weight:bold;
+    }
+    
+    .img-button{
+        background: color($colors,primary);
+        text-transform: none;
+        height:10vh;
+        font-size:2.5rem;
+        color:color($colors,secondary);
+        width: calc(100% - 16px);
+        margin: 8px;
+        border-radius: 5px;
+        font-weight:500;
+    }
+    
+    .img-bus{
+        background:linear-gradient(
+            rgba(0, 39, 76, 0.6), 
+            rgba(0, 39, 76, 0.6)
+          ),url('https://s3.amazonaws.com/i.seelio.com/38/0b/380bdca967295896042dfd83a0de4f6fd4ac.jpg');
+          background-size: cover;
+          background-repeat:no-repeat;
+          background-position: center;
+    }
+    
+    .img-dining{
+        background:linear-gradient(
+            rgba(0, 39, 76, 0.6),
+            rgba(0, 39, 76, 0.6)
+          ),url('https://dining.umich.edu/wp-content/uploads/2016/08/IMG_0154-1-1100x700.jpg');
+          background-size: cover;
+          background-repeat:no-repeat;
+          background-position: center;
+    }
+    
+    .img-comp{
+        background:linear-gradient(
+            rgba(0, 39, 76, 0.6),
+            rgba(0, 39, 76, 0.6)
+          ),url('https://its.umich.edu/sites/default/files/Angell-Hall-Campus-Computing-Site.jpg');
+          background-size: cover;
+          background-repeat:no-repeat;
+          background-position: center;
+    }
+    
+    .scroll-content{
+        background:color($colors, extra-light);
+        padding:0px !important;
+    }
 
-.widget {
-    height: 10vh;
-    width: 48%;
-    text-align: center;
-}
+    .image-card {
+        position: relative;
+        text-align: center;
+        background: rgba(0,39,76, 1) 
+      }
 
-.banner {
-    background: color($colors, secondary);
-    border-radius: 0px;
-    box-shadow:none;
-}
+      .image-card img{
+          opacity:0.4;
+      }
+    
+      .image-card .card-title {
+        position: absolute;
+        top: 40%;
+        font-size: 3.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+      }
 
+      .card-subtitle {
+        font-size: 1.0em;
+        // position: absolute;
+        // top: 52%;
+        // width: 100%;
+        color: #fff;
+      }
+    
 
-
-.fav-button{
-    height: 10vh;
-}
-
-ion-card-header{
-    font-weight:bold;
-}
-
-.img-button{
-    background: color($colors,primary);
-    text-transform: none;
-    height:10vh;
-    font-size:2.5rem;
-    color:color($colors,secondary);
-    width: calc(100% - 16px);
-    margin: 8px;
-    border-radius: 5px;
-    font-weight:500;
-}
-
-.img-bus{
-    background:linear-gradient(
-        rgba(0, 39, 76, 0.6), 
-        rgba(0, 39, 76, 0.6)
-      ),url('https://s3.amazonaws.com/i.seelio.com/38/0b/380bdca967295896042dfd83a0de4f6fd4ac.jpg');
-      background-size: cover;
-      background-repeat:no-repeat;
-      background-position: center;
-}
-
-.img-dining{
-    background:linear-gradient(
-        rgba(0, 39, 76, 0.6),
-        rgba(0, 39, 76, 0.6)
-      ),url('https://dining.umich.edu/wp-content/uploads/2016/08/IMG_0154-1-1100x700.jpg');
-      background-size: cover;
-      background-repeat:no-repeat;
-      background-position: center;
-}
-
-.img-comp{
-    background:linear-gradient(
-        rgba(0, 39, 76, 0.6),
-        rgba(0, 39, 76, 0.6)
-      ),url('https://its.umich.edu/sites/default/files/Angell-Hall-Campus-Computing-Site.jpg');
-      background-size: cover;
-      background-repeat:no-repeat;
-      background-position: center;
 }
 

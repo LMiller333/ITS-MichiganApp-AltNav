@@ -14,13 +14,12 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 })
 export class FiltersPage {
 
+  searchType: string = "";
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
-    let temp = navParams.get('searchTypeFromSearch');
-    
+    this.searchType= navParams.get('searchType');
   }
-
   
 
   dismiss() {
@@ -29,6 +28,7 @@ export class FiltersPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FiltersPage');
+
   }
 
 }

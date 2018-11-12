@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { RecsportsPage } from '../recsports/recsports';
 import { WidgetsPage } from '../widgets/widgets';
+import { AfterHoursPage } from '../after-hours/after-hours';
 
 /**
  * Generated class for the MorePage page.
@@ -29,6 +30,10 @@ export class MorePage {
 
   public goToWidgets() {
     this.navCtrl.push(WidgetsPage);
+  }
+
+  public goToAfterHours() {
+    this.navCtrl.push(AfterHoursPage);
   }
 
 }

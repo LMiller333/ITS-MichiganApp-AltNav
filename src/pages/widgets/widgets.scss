@@ -1,7 +1,11 @@
-p{
-    font-size:1rem;
+page-widgets{
+    p{
+        font-size:1.25rem;
+    }
+    
+    .custom-widget{
+        font-style:italic;
+    }
+
 }
 
-.custom-widget{
-    font-style:italic;
-}

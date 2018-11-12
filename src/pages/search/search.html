@@ -26,7 +26,7 @@
     <ion-toolbar>
         <ion-searchbar (ionInput)="getItems($event)" color="extra-light"></ion-searchbar>
         <ion-buttons right>
-            <button ion-button icon-only (click)="presentFilterModal()">
+            <button ion-button icon-only (click)="toggleFilters()">
               <ion-icon name="options" color="extra-light"></ion-icon>
             </button>
           </ion-buttons>
@@ -39,15 +39,56 @@
   <ion-content padding class="outer-content">
     <div [ngSwitch]="searchType">
       <div *ngSwitchCase="'places'">
-          <p >Search <strong>PLACES</strong> to find buildings, departments, dining locations, bus stops, parking lots, and more!</p>
-          <p>Example searches:</p>
-              <ul>
-                <li>Mosher Jordan</li>
-                <li>Shapiro</li>
-                <li>CAPS</li>
-              </ul>
+        <div class="search-explanation">
+            <p >Search <strong>PLACES</strong> to find buildings, departments, dining locations, bus stops, parking lots, and more!</p>
+            <p>Example searches:</p>
+                <ul>
+                  <li>Mosher Jordan</li>
+                  <li>Shapiro</li>
+                  <li>CAPS</li>
+                </ul>
+        </div>
+        <div class="search-filters hide">
+            <ion-list>
+                <ion-list-header>
+                    General
+                  </ion-list-header>
+                <ion-item>
+                  <ion-label>Place Type</ion-label>
+                    <ion-select [(ngModel)]="placetype" multiple="true">
+                        <ion-option value="building">Building</ion-option>
+                        <ion-option value="complab" [selected]="true">Computer Lab</ion-option>
+                        <ion-option value="department">Department</ion-option>
+
+                      </ion-select>
+                </ion-item>
+                <ion-item><ion-label>Near Me</ion-label> <ion-toggle></ion-toggle>
+                </ion-item>
+                <ion-item><ion-label>Open Now</ion-label><ion-toggle checked="true"></ion-toggle>
+                </ion-item>
+              </ion-list>
+
+              <ion-list>
+                  <ion-list-header>
+                    Computer Types
+                  </ion-list-header>
+                    <ion-item><ion-label>Windows</ion-label>><ion-toggle></ion-toggle></ion-item>
+                    <ion-item><ion-label>Mac</ion-label>><ion-toggle></ion-toggle></ion-item>
+                    <ion-item><ion-label>CAEN</ion-label>><ion-toggle></ion-toggle></ion-item>
+                  </ion-list>
+
+            <ion-list>
+              <ion-list-header>
+                Features
+              </ion-list-header>
+              <ion-item><ion-label>Printing</ion-label>><ion-toggle></ion-toggle></ion-item>
+              <ion-item><ion-label>Group Space</ion-label>><ion-toggle></ion-toggle></ion-item>
+              <ion-item><ion-label>Quiet</ion-label>><ion-toggle></ion-toggle></ion-item>
+              </ion-list>
+          </div>
       </div>
       <div *ngSwitchCase="'people'">
+        <div class="search-explanation">
           <p >Search <strong>PEOPLE</strong> to find people and groups within MCommunity.</p>
           <p>You can search for:</p>
               <ul>
@@ -56,9 +97,30 @@
                 <li>Phone Number</li>
                 <li>Group Name</li>
               </ul>
+        </div>
+        <div class="search-filters hide">
+            <ion-item>
+                <ion-label>Campus</ion-label>
+                  <ion-select [(ngModel)]="placetype" multiple="true">
+                      <ion-option value="complab" [selected]="true">Ann Arbor</ion-option>
+                      <ion-option value="building">Dearborn</ion-option>
+                      <ion-option value="department">Flint</ion-option>
+                    </ion-select>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Role</ion-label>
+                    <ion-select [(ngModel)]="placetype" multiple="true">
+                        <ion-option value="complab" >Student</ion-option>
+                        <ion-option value="building">Faculty</ion-option>
+                        <ion-option value="department">Staff</ion-option>
+                        <ion-option value="department">Alumni</ion-option>
+                      </ion-select>
+                </ion-item>
+        </div>
       </div>
 
       <div *ngSwitchCase="'courseguide'">
+        <div class="search-explanation">
           <p >Search <strong>COURSE GUIDE</strong> to search class titles, numbers, and descriptions from the course catalog. </p>
           <p>Example searches:</p>
               <ul>
@@ -66,6 +128,22 @@
                 <li>Public Health</li>
                 <li>Dinosaurs</li>
               </ul>
+        </div>
+        <div class="search-filters hide">
+            <ion-list>
+                <ion-item><ion-label>Bookmarked by me</ion-label><ion-toggle></ion-toggle></ion-item>
+                <ion-item>
+                    <ion-label>Term</ion-label>
+                      <ion-select [(ngModel)]="placetype" multiple="true">
+                          <ion-option value="building">F2018</ion-option>
+                          <ion-option value="complab" [selected]="true">W2018</ion-option>
+                          <ion-option value="department">Sp2019</ion-option>
+                        </ion-select>
+                  </ion-item>
+                  <button ion-item >Subject</button>
+            </ion-list>
+        </div>
+
       </div>
 
       <!-- <div *ngSwitchCase="'librarycatalog'">

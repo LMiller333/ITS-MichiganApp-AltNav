@@ -9,6 +9,7 @@ import { GreenehooverPage } from '../greenehoover/greenehoover';
 import { NorthquadPage} from '../northquad/northquad';
 import { MorePage} from '../more/more';
 import { HomeAltPage } from '../home-alt/home-alt';
+import { FavoritesPage } from '../favorites/favorites';
 
 @Component({
   selector: 'page-home',
@@ -52,6 +53,10 @@ export class HomePage {
 
   public goToAltHome(){
     this.navCtrl.push(HomeAltPage);
+  }
+
+  public goToFavorites(){
+    this.navCtrl.push(FavoritesPage);
   }
 
 

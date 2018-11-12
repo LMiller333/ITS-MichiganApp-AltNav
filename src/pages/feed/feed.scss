@@ -1,5 +1,14 @@
 page-feed {
 
+    .alert-description{
+        font-size:1rem !important;
+    }
+
+    .scroll-content{
+        background:color($colors, extra-light);
+        padding:0px !important;
+    }
+
 }
 
 // .view-more{
@@ -11,6 +20,3 @@ page-feed {
 // }
 
 
-.alert-description{
-    font-size:1rem !important;
-}

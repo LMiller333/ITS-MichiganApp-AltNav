@@ -19,6 +19,7 @@ import { MorePage } from '../pages/more/more';
 import { HomeAltPage } from '../pages/home-alt/home-alt';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { FiltersPage } from '../pages/filters/filters';
+import { AfterHoursPage } from '../pages/after-hours/after-hours';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MorePage,
     HomeAltPage,
     FavoritesPage,
-    FiltersPage
+    FiltersPage,
+    AfterHoursPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MorePage,
     HomeAltPage,
     FavoritesPage,
-    FiltersPage
+    FiltersPage,
+    AfterHoursPage
   ],
   providers: [
     StatusBar,

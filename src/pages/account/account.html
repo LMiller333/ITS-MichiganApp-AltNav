@@ -9,46 +9,30 @@
 <ion-content padding>
 
   <div class="profile">
-    <h2>Lindsay Miller</h2>
-    <h3>linmmill</h3>
-    <h3>User Experience Analyst Intermediate</h3>
+    <h2>Jane Smith</h2>
+    <h3>uniqname</h3>
+    <h3>Student - LSA</h3>
   </div>
 
   <ion-list>
-      <ion-item>
-          <ion-icon name="arrow-forward" item-end></ion-icon>
-          Set Away Message
-      </ion-item>
+      <button ion-item>Set Away Message</button>
     </ion-list>
 
   <ion-list>
     <ion-list-header>
-    Settings
+   Settings
     </ion-list-header>
-    <ion-item (click)="goToWidgets();">
-      <ion-icon name="arrow-forward" item-end></ion-icon>
-        Home Page
-    </ion-item>
-    <ion-item  (click)=goToFavorites();>
-        <ion-icon name="arrow-forward" item-end></ion-icon>
-        Favorites
-    </ion-item>
-    <ion-item>
-        <ion-icon name="arrow-forward" item-end></ion-icon>
-        Notifications
-    </ion-item>
+    <button ion-item (click)="goToWidgets();">Customize Home Page</button>
+    <button ion-item (click)="goToFavorites();">Edit Favorites</button>
+    <button ion-item (click)="goToWidgets();">Manage Notifications</button>
   </ion-list>
 
   <ion-list>
       <ion-list-header>
         Accessibility
       </ion-list-header>
-      <ion-item>
-        Night Mode
-      </ion-item>
-      <ion-item>
-          Font Size
-      </ion-item>
+      <button ion-item >Dark Mode</button>
+      <button ion-item >Font Size</button>
 
     </ion-list>
 

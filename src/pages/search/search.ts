@@ -17,9 +17,7 @@ export class SearchPage {
   constructor(public navCtrl: NavController, public modalCtrl:ModalController) {
   }
 
-  public presentFilterModal() {
-    const modal = this.modalCtrl.create(FiltersPage, {searchTypeFromSearch: this.searchType});
-    modal.present();
-  }
+public toggleFilters(){
+}
 
 }

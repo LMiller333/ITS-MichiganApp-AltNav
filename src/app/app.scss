@@ -15,36 +15,60 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ion-content {
-
+.toolbar-background{
+    background: color($colors, primary);
 }
 
-.scroll-content{
-    background:color($colors, extra-light);
-}
-
-.card, {
-    width: calc(100% - 16px);
-    margin:8px;
-    border-radius:5px;
-}
-
-.back-button{
-    color: color($colors, extra-light);
-}
-
-button{
-    border-radius:5px !important;
-}
-
-.alert-card{
-    background: color($colors, danger-light);
+.toolbar-title {
+    color:color($colors, extra-light);
 }
 
 .hide{
     display:none;
 }
 
-.footer{
-    margin-top: 2rem;
+.back-button{
+    color:color($colors, extra-light);
 }
+
+ion-content {
+ 
+    .card, {
+        width: calc(100% - 32px);
+        margin:16px;
+        border-radius:5px;
+    }
+    
+    .back-button{
+        color: color($colors, extra-light);
+    }
+    
+    button{
+        margin:16px;
+        border-radius:5px !important;
+    }
+    
+    .alert-card{
+        background: color($colors, danger-light);
+    }
+    
+
+    
+    .footer{
+        margin-top: 2rem;
+        padding: 1rem 0 1rem 0;
+        width:100%;
+        background-color: color($colors, rock-gray);
+    }
+
+    .emergency-button{
+        margin: 16px;
+    }
+
+    .footer button {
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+}
+
